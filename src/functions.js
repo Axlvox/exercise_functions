@@ -51,7 +51,35 @@
   console.log(maiorPalavra['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']);
   console.log(maiorPalavra['JavaScript', 'HTML', 'CSS', 'GitHub', 'Unix']);
 // Requisito 5 - Crie a função maisRepetido
+  function repeticoesPorNumero(numbers) {
+    let num = {};
+    for (let index = 0; index < numbers.length; index += 1) {
+      let valor = numbers[index];
+      if (num[valor] === undefined) {
+        num[valor] = 1;
+      } else {
+        num[valor] += 1;
 
+      }
+    }
+    return num;
+  }
+
+  function maisRepetido(numbers) {
+    let num = repeticoesPorNumero(numbers);
+    let repetido = 0;
+    let numero = 0;
+    for (let prop in num) {
+      if (repetido < num[prop]) {
+        repetido = num[prop]; 
+        numero = Number(prop);     
+      }
+    }
+    return numero;
+  }
+
+  console.log(maisRepetido([2, 3, 2, 5, 8, 2, 3]));
+  console.log(maisRepetido([2, 3, -2, 3, -2, 2, 3]));
 // Requisito 6 - Crie a função somatorio
 
 // Requisito 7 - Crie a função verificaFimPalavra
