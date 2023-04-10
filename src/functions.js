@@ -81,7 +81,18 @@
   console.log(maisRepetido([2, 3, 2, 5, 8, 2, 3]));
   console.log(maisRepetido([2, 3, -2, 3, -2, 2, 3]));
 // Requisito 6 - Crie a função somatorio
+  function somatorio(numbers) {
+    if (numbers < 0) return 'ERRO';
+    let soma = 0;
+    for (let index = 1; index <= numbers; index += 1) {
+      soma += index;
+    }
+    return soma;
+  }
 
+  console.log(somatorio[5]);
+  console.log(somatorio[1]);
+  console.log(somatorio[-7]);
 // Requisito 7 - Crie a função verificaFimPalavra
 
 // Não modifique essas linhas
