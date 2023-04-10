@@ -94,7 +94,23 @@
   console.log(somatorio[1]);
   console.log(somatorio[-7]);
 // Requisito 7 - Crie a função verificaFimPalavra
+  function verificaFimPalavra(word, endWord) {
+    let wordInverse = word.split('').reverse().join('');
+    let endWordInverse = endWord.split('').reverse().join('');
+    let final;
+    for (let index = 0; index < endWordInverse.length; index += 1) {
+      if (wordInverse[index] !== endWordInverse[index]) {
+        final = false;
+        break;
+      } else {
+        final = true;
+      }
+    }
+  return final;
+}
 
+  console.log(verificaFimPalavra('trybe', 'be'));
+  console.log(verificaFimPalavra('joaofernando', 'fernan'));
 // Não modifique essas linhas
 module.exports = {
   verificaPalindromo: typeof verificaPalindromo === 'function' ? verificaPalindromo : (() => {}),
