@@ -25,8 +25,21 @@
   console.log([2, 3, 6, 7, 10, 1]);
   console.log([9, 1, 3, 5, 7]);
 // Requisito 3 - Crie a função indiceDoMenor
+  function indiceDoMenor(numbers) {
+    let indiceDoMenor = 0;
+    for (let indice in numbers) {
+      if (numbers[indiceDoMenor] > numbers[indice]){
+        indiceDoMenor = Number(indice);
+      }
+    }
+    return indiceDoMenor;
+  }
+
+  console.log([2, 3, 6, 7, 10, 1]);
+  console.log([2, 4, 6, 7, 10, 0, -3]);
 
 // Requisito 4 - Crie a função maiorPalavra
+
 
 // Requisito 5 - Crie a função maisRepetido
 
