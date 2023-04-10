@@ -12,7 +12,18 @@
   console.log(verificaPalindromo('desenvolvimento'));
 
 // Requisito 2 - Crie a função indiceDoMaior
+  function indiceDoMaior(numbers) {
+    let indiceDoMaior = 0;
+    for (let indice in numbers) {
+      if (numbers[indiceDoMaior] < numbers[indice]){
+        indiceDoMaior = Number(indice);
+      }
+    }
+    return indiceDoMaior;
+  }
 
+  console.log([2, 3, 6, 7, 10, 1]);
+  console.log([9, 1, 3, 5, 7]);
 // Requisito 3 - Crie a função indiceDoMenor
 
 // Requisito 4 - Crie a função maiorPalavra
