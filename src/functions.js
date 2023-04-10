@@ -1,4 +1,15 @@
 // Requisito 1 - Crie a função verificaPalindromo
+  function verificaPalindromo(frase) {
+    let reverse = frase.split('').reverse().join('');
+    if (reverse === frase) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  console.log(verificaPalindromo('arara'));
+  console.log(verificaPalindromo('desenvolvimento'));
 
 // Requisito 2 - Crie a função indiceDoMaior
 
