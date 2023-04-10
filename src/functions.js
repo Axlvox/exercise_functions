@@ -37,10 +37,19 @@
 
   console.log([2, 3, 6, 7, 10, 1]);
   console.log([2, 4, 6, 7, 10, 0, -3]);
-
 // Requisito 4 - Crie a função maiorPalavra
+  function maiorPalavra(words) {
+    let maior = words[0];
+    for (let indice in words) {
+      if (maior.length < words[indice].length) {
+        maior = words[indice];
+      }
+    }
+  return maior;
+  }
 
-
+  console.log(maiorPalavra['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']);
+  console.log(maiorPalavra['JavaScript', 'HTML', 'CSS', 'GitHub', 'Unix']);
 // Requisito 5 - Crie a função maisRepetido
 
 // Requisito 6 - Crie a função somatorio
